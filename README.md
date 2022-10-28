@@ -3,7 +3,7 @@
 
 ## Exhaustive search
 
-$p$
+The _Orb function implements an exhaustive enumeration algorithm for finding the number of all orbits under the action of a Sylow p-subgroup H on the set of all Sylow p-subgroups of a group G that intersect H at one, where G is a group isomorphic to the automorphism group of a simple sporadic group.
 
 
 ```gap
@@ -58,4 +58,11 @@ gap> _Orb("J2",2);
 10
 ```
 
-The function \_Orb for $p=2$ does not give an answer for groups $Co_1$, $Co_2$, $Co_3$, $McL$, $Suz$
+```gap
+gap> _Orb("J1",2);
+127
+```
+
+
+
+The function \_Orb for $p=2$ does not give an answer for groups $Co_1$, $Co_2$, $Co_3$, $McL$, $Suz$, $He$, $HN$, $Th$,	$Fi_{22}$, $Fi_{23}$, $Fi_{24}'$, $B$, $M$, $O'N$
