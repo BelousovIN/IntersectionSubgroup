@@ -26,7 +26,7 @@ gap> _Orb:=function(IdG, p)
 end;
 ```
 
-The function \_Orb that implements the exhaustive search algorithm  for $p=2$  gives the answer for groups $M_{11}, M_{12}, M_{22}, M_{23}, M_{24}, HS, J_{2}$
+The function \_Orb  for $p=2$  gives the answer for groups $M_{11}$, $M_{12}$, $M_{22}$, $M_{23}$, $M_{24}$, $HS$, $J_{2}$, $J_3$
 ```gap
 gap> _Orb("M11",2);
 27
