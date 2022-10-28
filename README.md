@@ -26,7 +26,7 @@ gap> _Orb:=function(IdG, p)
 end;
 ```
 
-The function \_Orb  for $p=2$  gives the answer for groups $M_{11}$, $M_{12}$, $M_{22}$, $M_{23}$, $M_{24}$, $HS$, $J_{2}$, $J_1$
+The \_Orb function for $p=2$ gives the answer for groups $M_{11}$, $M_{12}$, $M_{22}$, $M_{23}$, $M_{24}$, $HS$, $J_{2}$, $J_1$
 ```gap
 gap> _Orb("M11",2);
 27
@@ -65,4 +65,4 @@ gap> _Orb("J1",2);
 
 
 
-The function \_Orb for $p=2$ does not give an answer for groups $Co_1$, $Co_2$, $Co_3$, $McL$, $Suz$, $He$, $HN$, $Th$,	$Fi_{22}$, $Fi_{23}$, $Fi_{24}'$, $B$, $M$, $O'N$
+The \_Orb function for $p=2$ does not give an answer for groups $Co_1$, $Co_2$, $Co_3$, $McL$, $Suz$, $He$, $HN$, $Th$,	$Fi_{22}$, $Fi_{23}$, $Fi_{24}'$, $B$, $M$, $O'N$
