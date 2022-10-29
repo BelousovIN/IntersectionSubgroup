@@ -20,9 +20,9 @@ gap> _Orb:=function(IdG, p)
 	
 
 	H:=SylowSubgroup( G, p );
-		Cl_Syl2:=ConjugateSubgroups(G,H);
-		Intersect:=Filtered(Cl_Syl2, x -> Order(Intersection(x,Cl_Syl2[1]))=1 );;
-		return Size(Intersect)/Order(H);
+	Cl_Syl2:=ConjugateSubgroups(G,H);
+	Intersect:=Filtered(Cl_Syl2, x -> Order(Intersection(x,Cl_Syl2[1]))=1 );;
+	return Size(Intersect)/Order(H);
 end;
 ```
 
