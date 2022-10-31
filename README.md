@@ -65,4 +65,7 @@ gap> _Orb("J1",2);
 
 
 
-The \_Orb function for $p=2$ does not give an answer for groups $Co_1$, $Co_2$, $Co_3$, $McL$, $Suz$, $He$, $HN$, $Th$,	$Fi_{22}$, $Fi_{23}$, $Fi_{24}'$, $B$, $M$, $O'N$, $J_3$, $Ru$, $J_4$. An error has occurred, `the predefined memory limit has been reached`. Used 16GB RAM.
+The \_Orb function for $p=2$ does not give an answer for groups $Co_1$, $Co_2$, $Co_3$, $McL$, $Suz$, $He$, $HN$, $Th$,	$Fi_{22}$, $Fi_{23}$, $Fi_{24}'$, $B$, $M$, $O'N$, $J_3$, $Ru$, $J_4$, $Ly$. 
+
+
+## Finding an estimate for Orb_p(G ) using the centralizer of the center of the Sylow p-subgroup
