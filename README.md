@@ -112,7 +112,7 @@ gap> IntersectOrders("M11",2,11);
 gap> IntersectOrders("M12",2,11);
 [ 128, 2, 1, 1, 2, 2, 2, 1, 1, 1, 4 ]
 3
-```gap
+```
 
 ```gap
 gap> IntersectOrders("M22",2,11);
