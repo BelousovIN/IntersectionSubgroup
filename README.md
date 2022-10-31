@@ -290,5 +290,10 @@ gap> IntersectOrders("Fi23",3,23);
 gap> IntersectOrders("McL",3,11);
 [ 729, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
 5
+```
 
+```gap
+gap> IntersectOrders("Suz",3,13);
+[ 2187, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
+1/2
 ```
