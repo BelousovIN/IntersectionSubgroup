@@ -193,5 +193,7 @@ gap> IntersectOrders("He",2,17);
 ```
 
 ```gap
+gap> IntersectOrders("HN",2,19);
+[ 32768, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
 
 ```
