@@ -73,3 +73,30 @@ The \_Orb function for $p=2$ does not give an answer for groups $Co_1$, $Co_2$, 
 Let a group $G$ isomorphic to the automorphism group of a simple sporadic group and its Sylow $p$-subgroup $H$ be given. If there exists an element $g$ from a Sylow $q$-subgroup $A$ such that $C\cap H^g=1$, then $Orb_p(G)\ge |C|/|N_G(H)|$ .
 
 The IntersectOrders function finds all the intersection orders of $C\cap H^g$, where $g$ runs through all elements of $A$, outputs an array of these orders, and if there exists an element $g$ with the above property, it takes the value $|C |/|N_G(H)|$. Otherwise, it takes the value $-1$.  
+
+```gap
+IntersectOrders:=function(IdG, p, q)
+	local G,H, A, C, orbH;
+	
+	if IdG in ["M11","M23","M24", "Co1", "Co2", "Co3", "Th", "Fi23", "B", "M", "J1",  "Ru", "J4", "Ly", "B", "M"] then
+		G:=AtlasGroup(IdG);
+	fi;
+	
+	if IdG in ["M12","M22",	"HS", "J2", "McL", "Suz", "He", "HN", "Fi22", "Fi24", "O'N", "J3"] then
+		G:=AtlasGroup(Concatenation(IdG,".2"));
+	fi;
+	
+	H:=SylowSubgroup(G,p);
+	A:=SylowSubgroup(G,q);
+	C:=Centralizer(G,Center(H));
+	orbH:=H^A;
+	if 1 in List(orbH, x-> Order(Intersection(x,C))) then 
+		Print(List(orbH, x-> Order(Intersection(x,C))), "\n");
+		return Order(C)/Order(Normalizer(G,H));
+	else
+		Print(List(orbH, x-> Order(Intersection(x,C))));
+		return -1;
+	fi;
+	
+end;
+```
