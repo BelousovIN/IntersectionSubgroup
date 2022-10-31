@@ -68,4 +68,8 @@ gap> _Orb("J1",2);
 The \_Orb function for $p=2$ does not give an answer for groups $Co_1$, $Co_2$, $Co_3$, $McL$, $Suz$, $He$, $HN$, $Th$,	$Fi_{22}$, $Fi_{23}$, $Fi_{24}'$, $B$, $M$, $O'N$, $J_3$, $Ru$, $J_4$, $Ly$. 
 
 
-## Finding an estimate for Orb_p(G ) using the centralizer of the center of the Sylow p-subgroup
+## Finding a Lower Bound for Orb_p(G) Using the Sylow p-Subgroup Center Centralizer
+
+Let a group $G$ isomorphic to the automorphism group of a simple sporadic group and its Sylow $p$-subgroup $H$ be given. If there exists an element $g$ from a Sylow $q$-subgroup $A$ such that $C\cap H^g=1$, then $Orb_p(G)\ge |C|/|N_G(H)|$ .
+
+The IntersectOrders function finds all the intersection orders of $C\cap H^g$, where $g$ runs through all elements of $A$, outputs an array of these orders, and if there exists an element $g$ with the above property, it takes the value $|C |/|N_G(H)|$. Otherwise, it takes the value $-1$.  
