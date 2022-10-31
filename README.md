@@ -75,7 +75,7 @@ Let a group $G$ isomorphic to the automorphism group of a simple sporadic group 
 The IntersectOrders function finds all the intersection orders of $C\cap H^g$, where $g$ runs through all elements of $A$, outputs an array of these orders, and if there exists an element $g$ with the above property, it takes the value $|C |/|N_G(H)|$. Otherwise, it takes the value $-1$.  
 
 ```gap
-IntersectOrders:=function(IdG, p, q)
+gap> IntersectOrders:=function(IdG, p, q)
 	local G,H, A, C, orbH;
 	
 	if IdG in ["M11","M23","M24", "Co1", "Co2", "Co3", "Th", "Fi23", "B", "M", "J1",  "Ru", "J4", "Ly", "B", "M"] then
@@ -94,9 +94,43 @@ IntersectOrders:=function(IdG, p, q)
 		Print(List(orbH, x-> Order(Intersection(x,C))), "\n");
 		return Order(C)/Order(Normalizer(G,H));
 	else
-		Print(List(orbH, x-> Order(Intersection(x,C))));
+		Print(List(orbH, x-> Order(Intersection(x,C))), "\n");
 		return -1;
 	fi;
 	
 end;
 ```
+
+
+```
+gap> IntersectOrders("M11",2,11);
+[ 16, 2, 1, 2, 1, 1, 1, 1, 2, 1, 2 ]
+3
+```
+
+```
+gap> IntersectOrders("M12",2,11);
+[ 128, 2, 1, 1, 2, 2, 2, 1, 1, 1, 4 ]
+3
+```
+
+```
+gap> IntersectOrders("M22",2,11);
+[ 256, 2, 2, 16, 2, 2, 4, 1, 16, 2, 4 ]
+3
+```
+
+```
+gap> IntersectOrders("M23",2,23);
+[ 128, 2, 1, 2, 1, 1, 2, 1, 1, 4, 1, 1, 1, 2, 2, 1, 1, 2, 1, 1, 2, 1, 1 ]
+21
+```
+
+```
+IntersectOrders("M24",2,23);
+[ 1024, 2, 2, 1, 2, 2, 1, 64, 2, 4, 2, 2, 1, 8, 2, 1, 64, 1, 2, 1, 1, 1, 4 ]
+21
+```
+
+
+
