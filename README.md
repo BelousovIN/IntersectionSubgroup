@@ -82,7 +82,7 @@ gap> IntersectOrders:=function(IdG, p, q)
 		G:=AtlasGroup(IdG);
 	fi;
 	
-	if IdG in ["M12","M22",	"HS", "J2", "McL", "Suz", "He", "HN", "Fi22", "Fi24", "O'N", "J3"] then
+	if IdG in ["M12","M22",	"HS", "J2", "McL", "Suz", "He", "HN", "Fi22", "Fi24", "ON", "J3"] then
 		G:=AtlasGroup(Concatenation(IdG,".2"));
 	fi;
 	
