@@ -101,6 +101,7 @@ gap> IntersectOrders:=function(IdG, p, q)
 end;
 ```
 
+$p=2$
 
 ```gap
 gap> IntersectOrders("M11",2,11);
