@@ -10,11 +10,11 @@ The _Orb function implements an exhaustive enumeration algorithm for finding the
 gap> _Orb:=function(IdG, p)
 	local G,H,Cl_Syl2, Intersect;
 	
-	if IdG in ["M11","M23","M24", "Co1", "Co2", "Co3", "Th", "Fi23", "B", "M", "J1",  "Ru", "J4", "Ly", "B", "M"] then
+	if IdG in ["M11","M23","M24", "Co1", "Co2", "Co3", "Th", "Fi23", "Fi24", "B", "M", "J1",  "Ru", "J4", "Ly", "B", "M"] then
 		G:=SimpleGroup(IdG);
 	fi;
 	
-	if IdG in ["M12","M22",	"HS", "J2", "McL", "Suz", "He", "HN", "Fi22", "Fi24", "ON", "J3"] then
+	if IdG in ["M12","M22",	"HS", "J2", "McL", "Suz", "He", "HN", "Fi22",  "ON", "J3"] then
 		G:=AutomorphismGroup(SimpleGroup(IdG));
 	fi;
 	
