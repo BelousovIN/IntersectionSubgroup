@@ -93,17 +93,17 @@ gap> OrbHall("M24",[3]);
 41956
 ```
 ```gap
-gap> OrbHall("HS",[2]);
-39
+gap> OrbHall("HS",[3]);
+17107
 ```
 ```gap
-gap> OrbHall("J2",[2]);
-10
+gap> OrbHall("J2",[3]);
+102
 ```
 
 ```gap
-gap> OrbHall("J1",[2]);
-127
+gap> OrbHall("J1",[3]);
+975
 ```
 
 
