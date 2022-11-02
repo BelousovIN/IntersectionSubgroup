@@ -67,6 +67,46 @@ gap> OrbHall("J1",[2]);
 The OrbHall function for $\pi=${2} does not give an answer for groups $Co_1$, $Co_2$, $Co_3$, $McL$, $Suz$, $He$, $HN$, $Th$,	$Fi_{22}$, $Fi_{23}$, $Fi_{24}'$, $B$, $M$, $O'N$, $J_3$, $Ru$, $J_4$, $Ly$. 
 
 
+The OrbHall function for $\pi=${3} gives the answer for groups $M_{11}$, $M_{12}$, $M_{22}$, $M_{23}$, $M_{24}$, $HS$, $J_{2}$, $J_1$
+
+```gap
+gap> OrbHall("M11",[3]);
+6
+```
+
+```gap
+gap> OrbHall("M12",[3]);
+31
+```
+
+```gap
+gap> OrbHall("M22",[3]);
+683
+```
+```gap
+gap> OrbHall("M23",[3]);
+7867
+```
+
+```gap
+gap> OrbHall("M24",[3]);
+41956
+```
+```gap
+gap> OrbHall("HS",[2]);
+39
+```
+```gap
+gap> OrbHall("J2",[2]);
+10
+```
+
+```gap
+gap> OrbHall("J1",[2]);
+127
+```
+
+
 ## Finding a Lower Bound for Orb_p(G) Using the Sylow $p$-Subgroup Center Centralizer
 
 Let a group $G$ isomorphic to the automorphism group of a simple sporadic group and its Sylow $p$-subgroup $H$ be given. If there exists an element $g$ from a Sylow $q$-subgroup $A$ such that $C\cap H^g=1$, then $Orb_p(G)\ge |C|/|N_G(H)|$ .
