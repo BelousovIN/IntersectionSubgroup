@@ -25,7 +25,7 @@ gap> OrbHall:=function(IdG, pi)
 end;
 ```
 
-The OrbHall function for $\pi=\{2\}$ gives the answer for groups $M_{11}$, $M_{12}$, $M_{22}$, $M_{23}$, $M_{24}$, $HS$, $J_{2}$, $J_1$
+The OrbHall function for $\pi=${2} gives the answer for groups $M_{11}$, $M_{12}$, $M_{22}$, $M_{23}$, $M_{24}$, $HS$, $J_{2}$, $J_1$
 ```gap
 gap> OrbHall("M11",[2]);
 27
@@ -64,7 +64,7 @@ gap> OrbHall("J1",[2]);
 
 
 
-The OrbHall function for $p=2$ does not give an answer for groups $Co_1$, $Co_2$, $Co_3$, $McL$, $Suz$, $He$, $HN$, $Th$,	$Fi_{22}$, $Fi_{23}$, $Fi_{24}'$, $B$, $M$, $O'N$, $J_3$, $Ru$, $J_4$, $Ly$. 
+The OrbHall function for $\pi=${2} does not give an answer for groups $Co_1$, $Co_2$, $Co_3$, $McL$, $Suz$, $He$, $HN$, $Th$,	$Fi_{22}$, $Fi_{23}$, $Fi_{24}'$, $B$, $M$, $O'N$, $J_3$, $Ru$, $J_4$, $Ly$. 
 
 
 ## Finding a Lower Bound for Orb_p(G) Using the Sylow $p$-Subgroup Center Centralizer
