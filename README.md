@@ -78,11 +78,11 @@ The IntersectOrders function finds all the intersection orders of $C\cap H^g$, w
 gap> IntersectOrders:=function(IdG, p, q)
 	local G,H, A, C, orbH;
 	
-	if IdG in ["M11","M23","M24", "Co1", "Co2", "Co3", "Th", "Fi23", "B", "M", "J1",  "Ru", "J4", "Ly", "B", "M"] then
+	if IdG in ["M11","M23","M24", "Co1", "Co2", "Co3", "Th", "Fi23", "Fi24", "B", "M", "J1",  "Ru", "J4", "Ly", "B", "M"] then
 		G:=AtlasGroup(IdG);
 	fi;
 	
-	if IdG in ["M12","M22",	"HS", "J2", "McL", "Suz", "He", "HN", "Fi22", "Fi24", "ON", "J3"] then
+	if IdG in ["M12","M22",	"HS", "J2", "McL", "Suz", "He", "HN", "Fi22",  "ON", "J3"] then
 		G:=AtlasGroup(Concatenation(IdG,".2"));
 	fi;
 	
