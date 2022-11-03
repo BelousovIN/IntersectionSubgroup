@@ -242,7 +242,7 @@ gap> IntersectOrders("HN",2,19);
 ```gap
 gap> IntersectOrders("J1",2,19);
 [ 8, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
-1/21
+1
 
 ```
 
