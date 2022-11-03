@@ -115,7 +115,7 @@ The IntersectOrders function finds all the intersection orders of $C\cap H^g$, w
 
 ```gap
 gap> IntersectOrders:=function(IdG, p, q)
-	local G,H, A, C, orbH;
+	local G,H, A, C, orbH, ListOrderIntersectH;
 	
 	if IdG in ["M11","M23","M24", "Co1", "Co2", "Co3", "Th", "Fi23", "Fi24", "B", "M", "J1",  "Ru", "J4", "Ly", "B", "M"] then
 		G:=AtlasGroup(IdG);
@@ -129,11 +129,12 @@ gap> IntersectOrders:=function(IdG, p, q)
 	A:=SylowSubgroup(G,q);
 	C:=Centralizer(G,Center(H));
 	orbH:=H^A;
-	if 1 in List(orbH, x-> Order(Intersection(x,C))) then 
-		Print(List(orbH, x-> Order(Intersection(x,C))), "\n");
-		return Order(C)/Order(Normalizer(G,H));
+	ListOrderIntersectH:=List(orbH, x-> Order(Intersection(x,C)));
+	if 1 in  ListOrderIntersectH then 
+		Print(ListOrderIntersectH, "\n");
+		return Order(C)/(Order(Normalizer(C,orbH[Position(ListOrderIntersectH,1)]))*Order(H));
 	else
-		Print(List(orbH, x-> Order(Intersection(x,C))), "\n");
+		Print(ListOrderIntersectH, "\n");
 		return -1;
 	fi;
 	
@@ -266,80 +267,85 @@ $p=3$
 ```gap
 gap> IntersectOrders("M11",3,11);
 [ 9, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
-1/16
+1
 ```
 
 ```gap
 gap> IntersectOrders("M12",3,11);
 [ 27, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
-1/2
+4
 ```
 
 ```gap
 gap> IntersectOrders("M22",3,11);
 [ 9, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
-1/16
+1
 ```
 
 ```gap
 gap> IntersectOrders("M23",3,11);
 [ 9, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
-1/16
+1
 ```
 
 ```gap
 gap> IntersectOrders("M24",3,11);
 [ 27, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
-5
+20
 ```
 
 ```gap
 gap> IntersectOrders("HS",3,11);
 [ 9, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
-1/16
+4
 ```
 
 ```gap
 gap> IntersectOrders("J2",3,7);
 [ 27, 1, 1, 1, 1, 1, 1 ]
-5
+10
 ```
 
 ```gap
 gap> IntersectOrders("Co3",3,23);
 [ 2187, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
-5
+160
 ```
 ```gap
 gap> IntersectOrders("Co2",3,23);
 [ 729, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
-20
+640
 ```
 
 ```gap
 gap> IntersectOrders("McL",3,11);
 [ 729, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
-5
+80
 ```
 
 ```gap
 gap> IntersectOrders("Suz",3,13);
 [ 2187, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
-1/2
+16
 ```
 
 ```gap
 gap> IntersectOrders("He",3,17);
 [ 27, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
-35
+560
 
 ```
 
 
 ```gap
-gap> IntersectOrders("Fi23",3,23);
-[ 1594323, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
-128
+gap>  IntersectOrders("Fi23",3,23);
+[ 1594323, 9, 1, 1, 1, 1, 3, 3, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 81 ]
+1024
 ```
+```gap
+gap> IntersectOrders("HN",3,19);
+[ 729, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
+80
 
+```
 
