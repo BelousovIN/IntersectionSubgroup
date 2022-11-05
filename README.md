@@ -367,11 +367,11 @@ gap> IntersectOrders("J3",3,5);
 ## Нахождение нижней границы для количества орбит, используя силовскую подгруппу большого простого порядка.
 
 ```gdp
-G:=AtlasGroup("J3");;
-H:=SylowSubgroup(G,3);;
-A:=SylowSubgroup(G,19);;
-orbH:=H^A;;
-Intersect1:=Filtered(orbH,x->Order(Intersection(H,x))=1);
+gap> G:=AtlasGroup("J3");;
+gap> H:=SylowSubgroup(G,3);;
+gap> A:=SylowSubgroup(G,19);;
+gap> orbH:=H^A;;
+gap> Intersect1:=Filtered(orbH,x->Order(Intersection(H,x))=1);
 [ <permutation group of size 243 with 4 generators>, <permutation group of size 243 with 4 generators>, <permutation group of size 243 with 4 generators>,
   <permutation group of size 243 with 4 generators>, <permutation group of size 243 with 4 generators>, <permutation group of size 243 with 4 generators>,
   <permutation group of size 243 with 4 generators>, <permutation group of size 243 with 4 generators>, <permutation group of size 243 with 4 generators>,
@@ -379,10 +379,11 @@ Intersect1:=Filtered(orbH,x->Order(Intersection(H,x))=1);
   <permutation group of size 243 with 4 generators>, <permutation group of size 243 with 4 generators>, <permutation group of size 243 with 4 generators>,
   <permutation group of size 243 with 4 generators>, <permutation group of size 243 with 4 generators>, <permutation group of size 243 with 4 generators> ]
 
+
 ```
 
 ```gap
-Orbit1:=Intersect1[1]^H;;
-Intersect1[2] in Orbit1;
+gap> Orbit1:=Intersect1[1]^H;;
+gap> Intersect1[2] in Orbit1;
 false
 ```
