@@ -353,6 +353,12 @@ gap> IntersectOrders("HN",3,19);
 ```
 
 ```gap
+gap> IntersectOrders("Fi22",3,13);
+[ 19683, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
+256
+```
+
+```gap
 gap> IntersectOrders("J1",3,19);
 [ 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
 10
