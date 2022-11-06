@@ -357,6 +357,11 @@ gap> IntersectOrders("Fi22",3,13);
 [ 19683, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
 256
 ```
+```gap
+gap> IntersectOrders("Fi23",3,13);
+[ 1594323, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1 ]
+1024
+```
 
 ```gap
 gap> IntersectOrders("J1",3,19);
