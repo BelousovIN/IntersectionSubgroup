@@ -399,7 +399,7 @@ gap> IntersectOrders("Ru",3,29);
 
 ## Нахождение нижней границы для количества орбит, используя силовскую подгруппу большого простого порядка.
 
-```gdp
+```gap
 gap> G:=AtlasGroup("J3");;
 gap> H:=SylowSubgroup(G,3);;
 gap> A:=SylowSubgroup(G,19);;
